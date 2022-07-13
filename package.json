@@ -1,0 +1,49 @@
+{
+  "name": "@wokwi/elfist",
+  "version": "0.0.0",
+  "description": "ELF Format Parser",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc && tsc -p tsconfig.esm.json",
+    "start": "ts-node demo/elf-dump",
+    "test": "echo 'No tests yet!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wokwi/elfist.git"
+  },
+  "keywords": [
+    "elf"
+  ],
+  "author": "Uri Shaked <uri@wokwi.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wokwi/elfist/issues"
+  },
+  "homepage": "https://github.com/wokwi/elfist#readme",
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.js": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
+}

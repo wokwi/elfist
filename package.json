@@ -11,6 +11,7 @@
   "scripts": {
     "build": "rimraf dist && tsc && tsc -p tsconfig.esm.json",
     "start": "ts-node demo/elf-dump",
+    "prepublish": "npm run build",
     "test": "echo 'No tests yet!'"
   },
   "repository": {
